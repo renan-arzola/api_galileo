@@ -1,5 +1,0 @@
-C:\Users\ARZOLARS\Google Drive\Visual Studio 2017\Projects\API_Consume\API_Consume\bin\API_Consume.dll.config
-C:\Users\ARZOLARS\Google Drive\Visual Studio 2017\Projects\API_Consume\API_Consume\bin\API_Consume.dll
-C:\Users\ARZOLARS\Google Drive\Visual Studio 2017\Projects\API_Consume\API_Consume\bin\API_Consume.pdb
-C:\Users\ARZOLARS\Google Drive\Visual Studio 2017\Projects\API_Consume\API_Consume\obj\Debug\API_Consume.dll
-C:\Users\ARZOLARS\Google Drive\Visual Studio 2017\Projects\API_Consume\API_Consume\obj\Debug\API_Consume.pdb
