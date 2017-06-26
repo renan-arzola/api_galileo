@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-galileo", "webapi-galileo\webapi-galileo.csproj", "{2507AD3A-FA6F-4D4D-9BCC-ADBE8036E664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-galileo.Tests", "webapi-galileo.Tests\webapi-galileo.Tests.csproj", "{4FFD3686-F08C-4082-97DB-BC9DE37AF4DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2507AD3A-FA6F-4D4D-9BCC-ADBE8036E664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2507AD3A-FA6F-4D4D-9BCC-ADBE8036E664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2507AD3A-FA6F-4D4D-9BCC-ADBE8036E664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2507AD3A-FA6F-4D4D-9BCC-ADBE8036E664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFD3686-F08C-4082-97DB-BC9DE37AF4DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFD3686-F08C-4082-97DB-BC9DE37AF4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFD3686-F08C-4082-97DB-BC9DE37AF4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFD3686-F08C-4082-97DB-BC9DE37AF4DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

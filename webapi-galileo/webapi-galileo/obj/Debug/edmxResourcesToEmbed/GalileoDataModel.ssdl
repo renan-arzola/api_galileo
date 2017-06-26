@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="galileo_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1000' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1000">
+    <Key>
+      <PropertyRef Name="COD_OWNER" />
+      <PropertyRef Name="RIF_OWNER" />
+      <PropertyRef Name="RS_OWNER" />
+      <PropertyRef Name="lic_owner" />
+    </Key>
+    <Property Name="COD_OWNER" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="RIF_OWNER" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NIT_OWNER" Type="varchar" MaxLength="10" />
+    <Property Name="RS_OWNER" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TEL1_OWNER" Type="varchar" MaxLength="12" />
+    <Property Name="TEL2_OWNER" Type="varchar" MaxLength="12" />
+    <Property Name="FAX_OWNER" Type="varchar" MaxLength="12" />
+    <Property Name="CE_OWNER" Type="varchar" MaxLength="50" />
+    <Property Name="URL_OWNER" Type="varchar" MaxLength="50" />
+    <Property Name="D_IMP1_OWNER" Type="varchar" MaxLength="10" />
+    <Property Name="A_IMP1_OWNER" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="D_IMP2_OWNER" Type="varchar" MaxLength="10" />
+    <Property Name="A_IMP2_OWNER" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="D_IMP3_OWNER" Type="varchar" MaxLength="10" />
+    <Property Name="A_IMP3_OWNER" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="lic_owner" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1001' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1001">
+    <Key>
+      <PropertyRef Name="COD_FONT" />
+    </Key>
+    <Property Name="COD_FONT" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NOM_FONT" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1010' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1010">
+    <Key>
+      <PropertyRef Name="COD_APPL" />
+    </Key>
+    <Property Name="COD_APPL" Type="bigint" Nullable="false" />
+    <Property Name="NOM_APPL" Type="varchar" MaxLength="10" />
+    <Property Name="DES_APPL" Type="varchar" MaxLength="50" />
+    <Property Name="IP_APPL" Type="varchar" MaxLength="15" />
+    <Property Name="TYPE_APPL" Type="varchar" MaxLength="10" />
+    <Property Name="COD_USU" Type="bigint" />
+    <Property Name="PORT_APPL" Type="numeric" Precision="6" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1100">
+    <Key>
+      <PropertyRef Name="COD_USU" />
+    </Key>
+    <Property Name="COD_USU" Type="bigint" Nullable="false" />
+    <Property Name="LOGIN_USU" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PASS_USU" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DES_USU" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="COD_GUSU" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="IP_USU" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="GAL_1101">
+    <Key>
+      <PropertyRef Name="COD_GUSU" />
+    </Key>
+    <Property Name="COD_GUSU" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DES_GUSU" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NIV_GUSU" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GAL_1102">
+    <Key>
+      <PropertyRef Name="cod_op" />
+    </Key>
+    <Property Name="cod_op" Type="bigint" Nullable="false" />
+    <Property Name="ced_op" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ape_op" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="nom_op" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="dir_op" Type="varchar" MaxLength="100" />
+    <Property Name="tel1_op" Type="varchar" MaxLength="12" />
+    <Property Name="tel2_op" Type="varchar" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="GAL_1200">
+    <Key>
+      <PropertyRef Name="COD_CLIE" />
+    </Key>
+    <Property Name="COD_CLIE" Type="bigint" Nullable="false" />
+    <Property Name="RIF_CLIE" Type="varchar" MaxLength="10" />
+    <Property Name="NIT_CLIE" Type="varchar" MaxLength="10" />
+    <Property Name="RS_CLIE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DIR_CLIE" Type="varchar" MaxLength="200" />
+    <Property Name="TEL1_CLIE" Type="varchar" MaxLength="12" />
+    <Property Name="TEL2_CLIE" Type="varchar" MaxLength="12" />
+    <Property Name="FAX_CLIE" Type="varchar" MaxLength="12" />
+    <Property Name="CE_CLIE" Type="varchar" MaxLength="50" />
+    <Property Name="URL_CLIE" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACTO_CLIE" Type="varchar" MaxLength="50" />
+    <Property Name="SALDO_CLIE" Type="numeric" Precision="16" Scale="2" />
+  </EntityType>
+  <EntityType Name="GAL_1201">
+    <Key>
+      <PropertyRef Name="COD_FLEET" />
+    </Key>
+    <Property Name="COD_FLEET" Type="bigint" Nullable="false" />
+    <Property Name="DES_FLEET" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="STATUS_FLEET" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="FECHA_CREACION_FLEET" Type="datetime" />
+    <Property Name="COD_CLIE" Type="bigint" />
+  </EntityType>
+  <EntityType Name="GAL_1300">
+    <Key>
+      <PropertyRef Name="COD_ENT" />
+    </Key>
+    <Property Name="COD_ENT" Type="bigint" Nullable="false" />
+    <Property Name="DESC_ENT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DES_ENT" Type="varchar" MaxLength="50" />
+    <Property Name="PLACAS_ENT" Type="varchar" MaxLength="7" />
+    <Property Name="COLOR_ENT" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="AÑO_ENT" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="ICONO_ENT" Type="varchar" MaxLength="100" />
+    <Property Name="cod_fleet" Type="bigint" />
+    <Property Name="SERIAL_ENT" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="SERHEX_ENT" Type="varchar" MaxLength="20" />
+    <Property Name="connect_state" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="index_tcp" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="cod_op" Type="bigint" />
+    <Property Name="cod_tveh" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="eco_ent" Type="varchar" MaxLength="10" />
+    <Property Name="tel_sim_ent" Type="numeric" Precision="11" Scale="0" />
+    <Property Name="ser_sim_ent" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="cod_eq" Type="numeric" Precision="10" Scale="0" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1301' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1301">
+    <Key>
+      <PropertyRef Name="COD_MARCA" />
+    </Key>
+    <Property Name="COD_MARCA" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DES_MARCA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GAL_1302">
+    <Key>
+      <PropertyRef Name="COD_EQ" />
+    </Key>
+    <Property Name="COD_EQ" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="marca_eq" Type="varchar" MaxLength="50" />
+    <Property Name="model_eq" Type="varchar" MaxLength="25" />
+    <Property Name="rev_eq" Type="varchar" MaxLength="5" />
+    <Property Name="TYPE_CMD_EQ" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1303' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1303">
+    <Key>
+      <PropertyRef Name="SER_HEX" />
+    </Key>
+    <Property Name="SER_HEX" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="index_conn" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="status" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1304">
+    <Key>
+      <PropertyRef Name="cod_tveh" />
+    </Key>
+    <Property Name="cod_tveh" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="des_tveh" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GAL_1310">
+    <Key>
+      <PropertyRef Name="COD_USU_ENT" />
+    </Key>
+    <Property Name="COD_USU_ENT" Type="bigint" Nullable="false" />
+    <Property Name="cod_usu" Type="bigint" Nullable="false" />
+    <Property Name="cod_ent" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1320' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1320">
+    <Key>
+      <PropertyRef Name="COD_ENT_APPL" />
+      <PropertyRef Name="COD_ENT" />
+    </Key>
+    <Property Name="COD_ENT_APPL" Type="bigint" Nullable="false" />
+    <Property Name="COD_ENT" Type="bigint" Nullable="false" />
+    <Property Name="COD_APPL" Type="numeric" Precision="10" Scale="0" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1400' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1400">
+    <Key>
+      <PropertyRef Name="COD_MAP" />
+    </Key>
+    <Property Name="COD_MAP" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DES_MAP" Type="varchar" MaxLength="50" />
+    <Property Name="NOM_MAP" Type="varchar" MaxLength="50" />
+    <Property Name="FIELD1_MAP" Type="varchar" MaxLength="25" />
+    <Property Name="FIELD2_MAP" Type="varchar" MaxLength="25" />
+    <Property Name="ZOOM_MAP" Type="numeric" Precision="15" Scale="8" />
+    <Property Name="RUTA_MAP" Type="varchar" MaxLength="200" />
+    <Property Name="TIPO_MAP" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="COLOR_MAP" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="SYMBOL_MAP" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="FONT_MAP" Type="varchar" MaxLength="50" />
+    <Property Name="VISIBLE_MAP" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="size_map" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="style_map" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="outline_map" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1500' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1500">
+    <Key>
+      <PropertyRef Name="cod_sms" />
+    </Key>
+    <Property Name="cod_sms" Type="bigint" Nullable="false" />
+    <Property Name="nro_sms" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="link_sms" Type="varchar" MaxLength="160" />
+    <Property Name="dir_sms" Type="varchar" MaxLength="160" />
+    <Property Name="ent_sms" Type="bigint" />
+    <Property Name="placa_ent" Type="varchar" MaxLength="7" />
+    <Property Name="fecha_sms" Type="datetime" />
+    <Property Name="evento_sms" Type="varchar" MaxLength="50" />
+    <Property Name="vel_sms" Type="numeric" Precision="6" Scale="2" />
+  </EntityType>
+  <EntityType Name="GAL_1600">
+    <Key>
+      <PropertyRef Name="COD_EVENT" />
+    </Key>
+    <Property Name="COD_EVENT" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_TEVENT" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DATETIME_EVENT" Type="datetime" Nullable="false" />
+    <Property Name="COD_ENT" Type="bigint" Nullable="false" />
+    <Property Name="LAT_EVENT" Type="decimal" Precision="30" Scale="6" Nullable="false" />
+    <Property Name="LON_EVENT" Type="decimal" Precision="30" Scale="6" Nullable="false" />
+    <Property Name="CURSO_EVENT" Type="numeric" Precision="6" Scale="0" />
+    <Property Name="ALTITUD_EVENT" Type="numeric" Precision="6" Scale="0" />
+    <Property Name="PTA2_EVENT" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="PTA1_EVENT" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="MOTOR_EVENT" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="ENCENDIDO_EVENT" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="ADDRESS_EVENT" Type="varchar(max)" />
+    <Property Name="VELOCITY_EVENT" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="odometer_event" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="calc_addr_event" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="infowindow_event" Type="varchar(max)" />
+    <Property Name="Anchor" Type="varchar" MaxLength="50" />
+    <Property Name="Image" Type="varchar(max)" />
+    <Property Name="Shadow" Type="varchar(max)" />
+    <Property Name="ShadowSize" Type="varchar" MaxLength="50" />
+    <Property Name="Size" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1601' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1601">
+    <Key>
+      <PropertyRef Name="COD_TEVENT" />
+    </Key>
+    <Property Name="COD_TEVENT" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DES_TEVENT" Type="varchar" MaxLength="30" />
+    <Property Name="COLOR_TEVENT" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="COMMAND_TEVENT" Type="numeric" Precision="2" Scale="0" />
+    <Property Name="COD_EQ" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="COMMANDSTR_TEVENT" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1610' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1610">
+    <Key>
+      <PropertyRef Name="COD_EVENT" />
+      <PropertyRef Name="COD_TEVENT" />
+      <PropertyRef Name="COD_ENT" />
+    </Key>
+    <Property Name="COD_EVENT" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COD_TEVENT" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DATETIME_EVENT" Type="datetime" />
+    <Property Name="COD_ENT" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="LAT_EVENT" Type="decimal" Precision="30" Scale="6" />
+    <Property Name="LON_EVENT" Type="decimal" Precision="30" Scale="6" />
+    <Property Name="CURSO_EVENT" Type="numeric" Precision="6" Scale="0" />
+    <Property Name="ALTITUD_EVENT" Type="numeric" Precision="6" Scale="0" />
+    <Property Name="PTA2_EVENT" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="PTA1_EVENT" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="MOTOR_EVENT" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="ENCENDIDO_EVENT" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1620' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1620">
+    <Key>
+      <PropertyRef Name="cod_index" />
+      <PropertyRef Name="cod_ent" />
+    </Key>
+    <Property Name="cod_index" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="cod_ent" Type="bigint" Nullable="false" />
+    <Property Name="nro_index" Type="numeric" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1680">
+    <Key>
+      <PropertyRef Name="cod_event" />
+    </Key>
+    <Property Name="cod_event" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="evento" Type="varchar" MaxLength="50" />
+    <Property Name="datetime_event" Type="smalldatetime" />
+    <Property Name="entidad" Type="varchar" MaxLength="50" />
+    <Property Name="lat_event" Type="float" />
+    <Property Name="lon_event" Type="float" />
+    <Property Name="address_event" Type="varchar" MaxLength="200" />
+    <Property Name="calc_addr_event" Type="int" />
+    <Property Name="serial_ent" Type="varchar" MaxLength="20" />
+    <Property Name="INFOWINDOW_EVENT" Type="varchar(max)" />
+    <Property Name="cod_ent" Type="bigint" />
+    <Property Name="Image" Type="varchar(max)" />
+    <Property Name="Shadow" Type="varchar(max)" />
+    <Property Name="Size" Type="varchar" MaxLength="50" />
+    <Property Name="anchor" Type="varchar" MaxLength="50" />
+    <Property Name="ShadowSize" Type="varchar" MaxLength="50" />
+    <Property Name="cmd_event" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="LastEditDate" Type="datetime" />
+    <Property Name="CreationDate" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1800' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1800">
+    <Key>
+      <PropertyRef Name="COD_COLOR" />
+      <PropertyRef Name="DESCRIPTION" />
+    </Key>
+    <Property Name="COD_COLOR" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="R" Type="numeric" Precision="3" Scale="0" />
+    <Property Name="G" Type="numeric" Precision="3" Scale="0" />
+    <Property Name="B" Type="numeric" Precision="3" Scale="0" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1900' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1900">
+    <Key>
+      <PropertyRef Name="COD_CMD" />
+      <PropertyRef Name="cod_tcmd" />
+    </Key>
+    <Property Name="COD_CMD" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="des_cmd" Type="varchar" MaxLength="40" />
+    <Property Name="lit_cmd" Type="varchar" MaxLength="2" />
+    <Property Name="num_cmd" Type="numeric" Precision="4" Scale="0" />
+    <Property Name="cod_tcmd" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="popup_cmd" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_1910' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_1910">
+    <Key>
+      <PropertyRef Name="cod_tcmd" />
+    </Key>
+    <Property Name="cod_tcmd" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="des_tcmd" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'galileo_db.dbo.GAL_8225' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GAL_8225">
+    <Key>
+      <PropertyRef Name="COD_TABLA" />
+      <PropertyRef Name="NOM_TABLA" />
+    </Key>
+    <Property Name="COD_TABLA" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NOM_TABLA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DES_TABLA" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_VALUE_TABLA" Type="numeric" Precision="10" Scale="0" />
+  </EntityType>
+  <Association Name="FK_GAL_1100_GAL_1101">
+    <End Role="GAL_1101" Type="Self.GAL_1101" Multiplicity="0..1" />
+    <End Role="GAL_1100" Type="Self.GAL_1100" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1101">
+        <PropertyRef Name="COD_GUSU" />
+      </Principal>
+      <Dependent Role="GAL_1100">
+        <PropertyRef Name="COD_GUSU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1201_GAL_1200">
+    <End Role="GAL_1200" Type="Self.GAL_1200" Multiplicity="0..1" />
+    <End Role="GAL_1201" Type="Self.GAL_1201" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1200">
+        <PropertyRef Name="COD_CLIE" />
+      </Principal>
+      <Dependent Role="GAL_1201">
+        <PropertyRef Name="COD_CLIE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1300_GAL_1102">
+    <End Role="GAL_1102" Type="Self.GAL_1102" Multiplicity="0..1" />
+    <End Role="GAL_1300" Type="Self.GAL_1300" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1102">
+        <PropertyRef Name="cod_op" />
+      </Principal>
+      <Dependent Role="GAL_1300">
+        <PropertyRef Name="cod_op" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1300_GAL_1201">
+    <End Role="GAL_1201" Type="Self.GAL_1201" Multiplicity="0..1" />
+    <End Role="GAL_1300" Type="Self.GAL_1300" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1201">
+        <PropertyRef Name="COD_FLEET" />
+      </Principal>
+      <Dependent Role="GAL_1300">
+        <PropertyRef Name="cod_fleet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1300_GAL_1302">
+    <End Role="GAL_1302" Type="Self.GAL_1302" Multiplicity="0..1" />
+    <End Role="GAL_1300" Type="Self.GAL_1300" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1302">
+        <PropertyRef Name="COD_EQ" />
+      </Principal>
+      <Dependent Role="GAL_1300">
+        <PropertyRef Name="cod_eq" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1300_GAL_1304">
+    <End Role="GAL_1304" Type="Self.GAL_1304" Multiplicity="1" />
+    <End Role="GAL_1300" Type="Self.GAL_1300" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1304">
+        <PropertyRef Name="cod_tveh" />
+      </Principal>
+      <Dependent Role="GAL_1300">
+        <PropertyRef Name="cod_tveh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1310_GAL_1100">
+    <End Role="GAL_1100" Type="Self.GAL_1100" Multiplicity="1" />
+    <End Role="GAL_1310" Type="Self.GAL_1310" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1100">
+        <PropertyRef Name="COD_USU" />
+      </Principal>
+      <Dependent Role="GAL_1310">
+        <PropertyRef Name="cod_usu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1310_GAL_1300">
+    <End Role="GAL_1300" Type="Self.GAL_1300" Multiplicity="1" />
+    <End Role="GAL_1310" Type="Self.GAL_1310" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1300">
+        <PropertyRef Name="COD_ENT" />
+      </Principal>
+      <Dependent Role="GAL_1310">
+        <PropertyRef Name="cod_ent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="galileo_dbModelStoreContainer">
+    <EntitySet Name="GAL_1100" EntityType="Self.GAL_1100" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1101" EntityType="Self.GAL_1101" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1102" EntityType="Self.GAL_1102" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1200" EntityType="Self.GAL_1200" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1201" EntityType="Self.GAL_1201" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1300" EntityType="Self.GAL_1300" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1302" EntityType="Self.GAL_1302" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1304" EntityType="Self.GAL_1304" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1310" EntityType="Self.GAL_1310" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1600" EntityType="Self.GAL_1600" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1680" EntityType="Self.GAL_1680" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAL_1000" EntityType="Self.GAL_1000" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1000].[COD_OWNER] AS [COD_OWNER], 
+    [GAL_1000].[RIF_OWNER] AS [RIF_OWNER], 
+    [GAL_1000].[NIT_OWNER] AS [NIT_OWNER], 
+    [GAL_1000].[RS_OWNER] AS [RS_OWNER], 
+    [GAL_1000].[TEL1_OWNER] AS [TEL1_OWNER], 
+    [GAL_1000].[TEL2_OWNER] AS [TEL2_OWNER], 
+    [GAL_1000].[FAX_OWNER] AS [FAX_OWNER], 
+    [GAL_1000].[CE_OWNER] AS [CE_OWNER], 
+    [GAL_1000].[URL_OWNER] AS [URL_OWNER], 
+    [GAL_1000].[D_IMP1_OWNER] AS [D_IMP1_OWNER], 
+    [GAL_1000].[A_IMP1_OWNER] AS [A_IMP1_OWNER], 
+    [GAL_1000].[D_IMP2_OWNER] AS [D_IMP2_OWNER], 
+    [GAL_1000].[A_IMP2_OWNER] AS [A_IMP2_OWNER], 
+    [GAL_1000].[D_IMP3_OWNER] AS [D_IMP3_OWNER], 
+    [GAL_1000].[A_IMP3_OWNER] AS [A_IMP3_OWNER], 
+    [GAL_1000].[lic_owner] AS [lic_owner]
+    FROM [dbo].[GAL_1000] AS [GAL_1000]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1001" EntityType="Self.GAL_1001" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1001].[COD_FONT] AS [COD_FONT], 
+    [GAL_1001].[NOM_FONT] AS [NOM_FONT]
+    FROM [dbo].[GAL_1001] AS [GAL_1001]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1010" EntityType="Self.GAL_1010" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1010].[COD_APPL] AS [COD_APPL], 
+    [GAL_1010].[NOM_APPL] AS [NOM_APPL], 
+    [GAL_1010].[DES_APPL] AS [DES_APPL], 
+    [GAL_1010].[IP_APPL] AS [IP_APPL], 
+    [GAL_1010].[TYPE_APPL] AS [TYPE_APPL], 
+    [GAL_1010].[COD_USU] AS [COD_USU], 
+    [GAL_1010].[PORT_APPL] AS [PORT_APPL]
+    FROM [dbo].[GAL_1010] AS [GAL_1010]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1301" EntityType="Self.GAL_1301" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1301].[COD_MARCA] AS [COD_MARCA], 
+    [GAL_1301].[DES_MARCA] AS [DES_MARCA]
+    FROM [dbo].[GAL_1301] AS [GAL_1301]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1303" EntityType="Self.GAL_1303" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1303].[SER_HEX] AS [SER_HEX], 
+    [GAL_1303].[index_conn] AS [index_conn], 
+    [GAL_1303].[status] AS [status]
+    FROM [dbo].[GAL_1303] AS [GAL_1303]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1320" EntityType="Self.GAL_1320" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1320].[COD_ENT_APPL] AS [COD_ENT_APPL], 
+    [GAL_1320].[COD_ENT] AS [COD_ENT], 
+    [GAL_1320].[COD_APPL] AS [COD_APPL]
+    FROM [dbo].[GAL_1320] AS [GAL_1320]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1400" EntityType="Self.GAL_1400" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1400].[COD_MAP] AS [COD_MAP], 
+    [GAL_1400].[DES_MAP] AS [DES_MAP], 
+    [GAL_1400].[NOM_MAP] AS [NOM_MAP], 
+    [GAL_1400].[FIELD1_MAP] AS [FIELD1_MAP], 
+    [GAL_1400].[FIELD2_MAP] AS [FIELD2_MAP], 
+    [GAL_1400].[ZOOM_MAP] AS [ZOOM_MAP], 
+    [GAL_1400].[RUTA_MAP] AS [RUTA_MAP], 
+    [GAL_1400].[TIPO_MAP] AS [TIPO_MAP], 
+    [GAL_1400].[COLOR_MAP] AS [COLOR_MAP], 
+    [GAL_1400].[SYMBOL_MAP] AS [SYMBOL_MAP], 
+    [GAL_1400].[FONT_MAP] AS [FONT_MAP], 
+    [GAL_1400].[VISIBLE_MAP] AS [VISIBLE_MAP], 
+    [GAL_1400].[size_map] AS [size_map], 
+    [GAL_1400].[style_map] AS [style_map], 
+    [GAL_1400].[outline_map] AS [outline_map]
+    FROM [dbo].[GAL_1400] AS [GAL_1400]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1500" EntityType="Self.GAL_1500" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1500].[cod_sms] AS [cod_sms], 
+    [GAL_1500].[nro_sms] AS [nro_sms], 
+    [GAL_1500].[link_sms] AS [link_sms], 
+    [GAL_1500].[dir_sms] AS [dir_sms], 
+    [GAL_1500].[ent_sms] AS [ent_sms], 
+    [GAL_1500].[placa_ent] AS [placa_ent], 
+    [GAL_1500].[fecha_sms] AS [fecha_sms], 
+    [GAL_1500].[evento_sms] AS [evento_sms], 
+    [GAL_1500].[vel_sms] AS [vel_sms]
+    FROM [dbo].[GAL_1500] AS [GAL_1500]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1601" EntityType="Self.GAL_1601" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1601].[COD_TEVENT] AS [COD_TEVENT], 
+    [GAL_1601].[DES_TEVENT] AS [DES_TEVENT], 
+    [GAL_1601].[COLOR_TEVENT] AS [COLOR_TEVENT], 
+    [GAL_1601].[COMMAND_TEVENT] AS [COMMAND_TEVENT], 
+    [GAL_1601].[COD_EQ] AS [COD_EQ], 
+    [GAL_1601].[COMMANDSTR_TEVENT] AS [COMMANDSTR_TEVENT]
+    FROM [dbo].[GAL_1601] AS [GAL_1601]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1610" EntityType="Self.GAL_1610" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1610].[COD_EVENT] AS [COD_EVENT], 
+    [GAL_1610].[COD_TEVENT] AS [COD_TEVENT], 
+    [GAL_1610].[DATETIME_EVENT] AS [DATETIME_EVENT], 
+    [GAL_1610].[COD_ENT] AS [COD_ENT], 
+    [GAL_1610].[LAT_EVENT] AS [LAT_EVENT], 
+    [GAL_1610].[LON_EVENT] AS [LON_EVENT], 
+    [GAL_1610].[CURSO_EVENT] AS [CURSO_EVENT], 
+    [GAL_1610].[ALTITUD_EVENT] AS [ALTITUD_EVENT], 
+    [GAL_1610].[PTA2_EVENT] AS [PTA2_EVENT], 
+    [GAL_1610].[PTA1_EVENT] AS [PTA1_EVENT], 
+    [GAL_1610].[MOTOR_EVENT] AS [MOTOR_EVENT], 
+    [GAL_1610].[ENCENDIDO_EVENT] AS [ENCENDIDO_EVENT]
+    FROM [dbo].[GAL_1610] AS [GAL_1610]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1620" EntityType="Self.GAL_1620" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1620].[cod_index] AS [cod_index], 
+    [GAL_1620].[cod_ent] AS [cod_ent], 
+    [GAL_1620].[nro_index] AS [nro_index]
+    FROM [dbo].[GAL_1620] AS [GAL_1620]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1800" EntityType="Self.GAL_1800" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1800].[COD_COLOR] AS [COD_COLOR], 
+    [GAL_1800].[DESCRIPTION] AS [DESCRIPTION], 
+    [GAL_1800].[R] AS [R], 
+    [GAL_1800].[G] AS [G], 
+    [GAL_1800].[B] AS [B]
+    FROM [dbo].[GAL_1800] AS [GAL_1800]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1900" EntityType="Self.GAL_1900" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1900].[COD_CMD] AS [COD_CMD], 
+    [GAL_1900].[des_cmd] AS [des_cmd], 
+    [GAL_1900].[lit_cmd] AS [lit_cmd], 
+    [GAL_1900].[num_cmd] AS [num_cmd], 
+    [GAL_1900].[cod_tcmd] AS [cod_tcmd], 
+    [GAL_1900].[popup_cmd] AS [popup_cmd]
+    FROM [dbo].[GAL_1900] AS [GAL_1900]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_1910" EntityType="Self.GAL_1910" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_1910].[cod_tcmd] AS [cod_tcmd], 
+    [GAL_1910].[des_tcmd] AS [des_tcmd]
+    FROM [dbo].[GAL_1910] AS [GAL_1910]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GAL_8225" EntityType="Self.GAL_8225" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GAL_8225].[COD_TABLA] AS [COD_TABLA], 
+    [GAL_8225].[NOM_TABLA] AS [NOM_TABLA], 
+    [GAL_8225].[DES_TABLA] AS [DES_TABLA], 
+    [GAL_8225].[LAST_VALUE_TABLA] AS [LAST_VALUE_TABLA]
+    FROM [dbo].[GAL_8225] AS [GAL_8225]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_GAL_1100_GAL_1101" Association="Self.FK_GAL_1100_GAL_1101">
+      <End Role="GAL_1101" EntitySet="GAL_1101" />
+      <End Role="GAL_1100" EntitySet="GAL_1100" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1201_GAL_1200" Association="Self.FK_GAL_1201_GAL_1200">
+      <End Role="GAL_1200" EntitySet="GAL_1200" />
+      <End Role="GAL_1201" EntitySet="GAL_1201" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1300_GAL_1102" Association="Self.FK_GAL_1300_GAL_1102">
+      <End Role="GAL_1102" EntitySet="GAL_1102" />
+      <End Role="GAL_1300" EntitySet="GAL_1300" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1300_GAL_1201" Association="Self.FK_GAL_1300_GAL_1201">
+      <End Role="GAL_1201" EntitySet="GAL_1201" />
+      <End Role="GAL_1300" EntitySet="GAL_1300" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1300_GAL_1302" Association="Self.FK_GAL_1300_GAL_1302">
+      <End Role="GAL_1302" EntitySet="GAL_1302" />
+      <End Role="GAL_1300" EntitySet="GAL_1300" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1300_GAL_1304" Association="Self.FK_GAL_1300_GAL_1304">
+      <End Role="GAL_1304" EntitySet="GAL_1304" />
+      <End Role="GAL_1300" EntitySet="GAL_1300" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1310_GAL_1100" Association="Self.FK_GAL_1310_GAL_1100">
+      <End Role="GAL_1100" EntitySet="GAL_1100" />
+      <End Role="GAL_1310" EntitySet="GAL_1310" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1310_GAL_1300" Association="Self.FK_GAL_1310_GAL_1300">
+      <End Role="GAL_1300" EntitySet="GAL_1300" />
+      <End Role="GAL_1310" EntitySet="GAL_1310" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

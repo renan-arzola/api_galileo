@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="galileo_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GAL_1100">
+    <Key>
+      <PropertyRef Name="COD_USU" />
+    </Key>
+    <Property Name="COD_USU" Type="Int64" Nullable="false" />
+    <Property Name="LOGIN_USU" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASS_USU" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DES_USU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COD_GUSU" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="IP_USU" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="GAL_1101" Relationship="Self.FK_GAL_1100_GAL_1101" FromRole="GAL_1100" ToRole="GAL_1101" />
+    <NavigationProperty Name="GAL_1310" Relationship="Self.FK_GAL_1310_GAL_1100" FromRole="GAL_1100" ToRole="GAL_1310" />
+  </EntityType>
+  <EntityType Name="GAL_1101">
+    <Key>
+      <PropertyRef Name="COD_GUSU" />
+    </Key>
+    <Property Name="COD_GUSU" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DES_GUSU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NIV_GUSU" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+    <NavigationProperty Name="GAL_1100" Relationship="Self.FK_GAL_1100_GAL_1101" FromRole="GAL_1101" ToRole="GAL_1100" />
+  </EntityType>
+  <EntityType Name="GAL_1102">
+    <Key>
+      <PropertyRef Name="cod_op" />
+    </Key>
+    <Property Name="cod_op" Type="Int64" Nullable="false" />
+    <Property Name="ced_op" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ape_op" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nom_op" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dir_op" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tel1_op" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="tel2_op" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="GAL_1300" Relationship="Self.FK_GAL_1300_GAL_1102" FromRole="GAL_1102" ToRole="GAL_1300" />
+  </EntityType>
+  <EntityType Name="GAL_1200">
+    <Key>
+      <PropertyRef Name="COD_CLIE" />
+    </Key>
+    <Property Name="COD_CLIE" Type="Int64" Nullable="false" />
+    <Property Name="RIF_CLIE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NIT_CLIE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RS_CLIE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIR_CLIE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TEL1_CLIE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="TEL2_CLIE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="FAX_CLIE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CE_CLIE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="URL_CLIE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACTO_CLIE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALDO_CLIE" Type="Decimal" Precision="16" Scale="2" />
+    <NavigationProperty Name="GAL_1201" Relationship="Self.FK_GAL_1201_GAL_1200" FromRole="GAL_1200" ToRole="GAL_1201" />
+  </EntityType>
+  <EntityType Name="GAL_1201">
+    <Key>
+      <PropertyRef Name="COD_FLEET" />
+    </Key>
+    <Property Name="COD_FLEET" Type="Int64" Nullable="false" />
+    <Property Name="DES_FLEET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS_FLEET" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="FECHA_CREACION_FLEET" Type="DateTime" Precision="3" />
+    <Property Name="COD_CLIE" Type="Int64" />
+    <NavigationProperty Name="GAL_1200" Relationship="Self.FK_GAL_1201_GAL_1200" FromRole="GAL_1201" ToRole="GAL_1200" />
+    <NavigationProperty Name="GAL_1300" Relationship="Self.FK_GAL_1300_GAL_1201" FromRole="GAL_1201" ToRole="GAL_1300" />
+  </EntityType>
+  <EntityType Name="GAL_1300">
+    <Key>
+      <PropertyRef Name="COD_ENT" />
+    </Key>
+    <Property Name="COD_ENT" Type="Int64" Nullable="false" />
+    <Property Name="DESC_ENT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DES_ENT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PLACAS_ENT" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="COLOR_ENT" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AÑO_ENT" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="ICONO_ENT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cod_fleet" Type="Int64" />
+    <Property Name="SERIAL_ENT" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="SERHEX_ENT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="connect_state" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="index_tcp" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="cod_op" Type="Int64" />
+    <Property Name="cod_tveh" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="eco_ent" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tel_sim_ent" Type="Decimal" Precision="11" Scale="0" />
+    <Property Name="ser_sim_ent" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="cod_eq" Type="Decimal" Precision="10" Scale="0" />
+    <NavigationProperty Name="GAL_1102" Relationship="Self.FK_GAL_1300_GAL_1102" FromRole="GAL_1300" ToRole="GAL_1102" />
+    <NavigationProperty Name="GAL_1201" Relationship="Self.FK_GAL_1300_GAL_1201" FromRole="GAL_1300" ToRole="GAL_1201" />
+    <NavigationProperty Name="GAL_1302" Relationship="Self.FK_GAL_1300_GAL_1302" FromRole="GAL_1300" ToRole="GAL_1302" />
+    <NavigationProperty Name="GAL_1304" Relationship="Self.FK_GAL_1300_GAL_1304" FromRole="GAL_1300" ToRole="GAL_1304" />
+    <NavigationProperty Name="GAL_1310" Relationship="Self.FK_GAL_1310_GAL_1300" FromRole="GAL_1300" ToRole="GAL_1310" />
+  </EntityType>
+  <EntityType Name="GAL_1302">
+    <Key>
+      <PropertyRef Name="COD_EQ" />
+    </Key>
+    <Property Name="COD_EQ" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="marca_eq" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="model_eq" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="rev_eq" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE_CMD_EQ" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="GAL_1300" Relationship="Self.FK_GAL_1300_GAL_1302" FromRole="GAL_1302" ToRole="GAL_1300" />
+  </EntityType>
+  <EntityType Name="GAL_1304">
+    <Key>
+      <PropertyRef Name="cod_tveh" />
+    </Key>
+    <Property Name="cod_tveh" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="des_tveh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="GAL_1300" Relationship="Self.FK_GAL_1300_GAL_1304" FromRole="GAL_1304" ToRole="GAL_1300" />
+  </EntityType>
+  <EntityType Name="GAL_1310">
+    <Key>
+      <PropertyRef Name="COD_USU_ENT" />
+    </Key>
+    <Property Name="COD_USU_ENT" Type="Int64" Nullable="false" />
+    <Property Name="cod_usu" Type="Int64" Nullable="false" />
+    <Property Name="cod_ent" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="GAL_1100" Relationship="Self.FK_GAL_1310_GAL_1100" FromRole="GAL_1310" ToRole="GAL_1100" />
+    <NavigationProperty Name="GAL_1300" Relationship="Self.FK_GAL_1310_GAL_1300" FromRole="GAL_1310" ToRole="GAL_1300" />
+  </EntityType>
+  <EntityType Name="GAL_1600">
+    <Key>
+      <PropertyRef Name="COD_EVENT" />
+    </Key>
+    <Property Name="COD_EVENT" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COD_TEVENT" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DATETIME_EVENT" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COD_ENT" Type="Int64" Nullable="false" />
+    <Property Name="LAT_EVENT" Type="Decimal" Precision="30" Scale="6" Nullable="false" />
+    <Property Name="LON_EVENT" Type="Decimal" Precision="30" Scale="6" Nullable="false" />
+    <Property Name="CURSO_EVENT" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="ALTITUD_EVENT" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="PTA2_EVENT" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="PTA1_EVENT" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="MOTOR_EVENT" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="ENCENDIDO_EVENT" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="ADDRESS_EVENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="VELOCITY_EVENT" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="odometer_event" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="calc_addr_event" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="infowindow_event" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Anchor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Shadow" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ShadowSize" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GAL_1680">
+    <Key>
+      <PropertyRef Name="cod_event" />
+    </Key>
+    <Property Name="cod_event" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="evento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datetime_event" Type="DateTime" Precision="0" />
+    <Property Name="entidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lat_event" Type="Double" />
+    <Property Name="lon_event" Type="Double" />
+    <Property Name="address_event" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="calc_addr_event" Type="Int32" />
+    <Property Name="serial_ent" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="INFOWINDOW_EVENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cod_ent" Type="Int64" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Shadow" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="anchor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShadowSize" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cmd_event" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="LastEditDate" Type="DateTime" Precision="3" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="GAL_1000">
+    <Key>
+      <PropertyRef Name="COD_OWNER" />
+      <PropertyRef Name="RIF_OWNER" />
+      <PropertyRef Name="RS_OWNER" />
+      <PropertyRef Name="lic_owner" />
+    </Key>
+    <Property Name="COD_OWNER" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="RIF_OWNER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NIT_OWNER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RS_OWNER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TEL1_OWNER" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="TEL2_OWNER" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="FAX_OWNER" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CE_OWNER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="URL_OWNER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="D_IMP1_OWNER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="A_IMP1_OWNER" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="D_IMP2_OWNER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="A_IMP2_OWNER" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="D_IMP3_OWNER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="A_IMP3_OWNER" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="lic_owner" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GAL_1001">
+    <Key>
+      <PropertyRef Name="COD_FONT" />
+    </Key>
+    <Property Name="COD_FONT" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NOM_FONT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GAL_1010">
+    <Key>
+      <PropertyRef Name="COD_APPL" />
+    </Key>
+    <Property Name="COD_APPL" Type="Int64" Nullable="false" />
+    <Property Name="NOM_APPL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DES_APPL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IP_APPL" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE_APPL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="COD_USU" Type="Int64" />
+    <Property Name="PORT_APPL" Type="Decimal" Precision="6" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1301">
+    <Key>
+      <PropertyRef Name="COD_MARCA" />
+    </Key>
+    <Property Name="COD_MARCA" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DES_MARCA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GAL_1303">
+    <Key>
+      <PropertyRef Name="SER_HEX" />
+    </Key>
+    <Property Name="SER_HEX" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="index_conn" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="status" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1320">
+    <Key>
+      <PropertyRef Name="COD_ENT_APPL" />
+      <PropertyRef Name="COD_ENT" />
+    </Key>
+    <Property Name="COD_ENT_APPL" Type="Int64" Nullable="false" />
+    <Property Name="COD_ENT" Type="Int64" Nullable="false" />
+    <Property Name="COD_APPL" Type="Decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1400">
+    <Key>
+      <PropertyRef Name="COD_MAP" />
+    </Key>
+    <Property Name="COD_MAP" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DES_MAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOM_MAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD1_MAP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD2_MAP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ZOOM_MAP" Type="Decimal" Precision="15" Scale="8" />
+    <Property Name="RUTA_MAP" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_MAP" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="COLOR_MAP" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="SYMBOL_MAP" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="FONT_MAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VISIBLE_MAP" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="size_map" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="style_map" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="outline_map" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1500">
+    <Key>
+      <PropertyRef Name="cod_sms" />
+    </Key>
+    <Property Name="cod_sms" Type="Int64" Nullable="false" />
+    <Property Name="nro_sms" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="link_sms" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="dir_sms" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="ent_sms" Type="Int64" />
+    <Property Name="placa_ent" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_sms" Type="DateTime" Precision="3" />
+    <Property Name="evento_sms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vel_sms" Type="Decimal" Precision="6" Scale="2" />
+  </EntityType>
+  <EntityType Name="GAL_1601">
+    <Key>
+      <PropertyRef Name="COD_TEVENT" />
+    </Key>
+    <Property Name="COD_TEVENT" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DES_TEVENT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="COLOR_TEVENT" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="COMMAND_TEVENT" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="COD_EQ" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="COMMANDSTR_TEVENT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GAL_1610">
+    <Key>
+      <PropertyRef Name="COD_EVENT" />
+      <PropertyRef Name="COD_TEVENT" />
+      <PropertyRef Name="COD_ENT" />
+    </Key>
+    <Property Name="COD_EVENT" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COD_TEVENT" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DATETIME_EVENT" Type="DateTime" Precision="3" />
+    <Property Name="COD_ENT" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="LAT_EVENT" Type="Decimal" Precision="30" Scale="6" />
+    <Property Name="LON_EVENT" Type="Decimal" Precision="30" Scale="6" />
+    <Property Name="CURSO_EVENT" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="ALTITUD_EVENT" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="PTA2_EVENT" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="PTA1_EVENT" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="MOTOR_EVENT" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="ENCENDIDO_EVENT" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1620">
+    <Key>
+      <PropertyRef Name="cod_index" />
+      <PropertyRef Name="cod_ent" />
+    </Key>
+    <Property Name="cod_index" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="cod_ent" Type="Int64" Nullable="false" />
+    <Property Name="nro_index" Type="Decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1800">
+    <Key>
+      <PropertyRef Name="COD_COLOR" />
+      <PropertyRef Name="DESCRIPTION" />
+    </Key>
+    <Property Name="COD_COLOR" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="R" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="G" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="B" Type="Decimal" Precision="3" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1900">
+    <Key>
+      <PropertyRef Name="COD_CMD" />
+      <PropertyRef Name="cod_tcmd" />
+    </Key>
+    <Property Name="COD_CMD" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="des_cmd" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="lit_cmd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="num_cmd" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="cod_tcmd" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="popup_cmd" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="GAL_1910">
+    <Key>
+      <PropertyRef Name="cod_tcmd" />
+    </Key>
+    <Property Name="cod_tcmd" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="des_tcmd" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GAL_8225">
+    <Key>
+      <PropertyRef Name="COD_TABLA" />
+      <PropertyRef Name="NOM_TABLA" />
+    </Key>
+    <Property Name="COD_TABLA" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NOM_TABLA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DES_TABLA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_VALUE_TABLA" Type="Decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <Association Name="FK_GAL_1100_GAL_1101">
+    <End Role="GAL_1101" Type="Self.GAL_1101" Multiplicity="0..1" />
+    <End Role="GAL_1100" Type="Self.GAL_1100" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1101">
+        <PropertyRef Name="COD_GUSU" />
+      </Principal>
+      <Dependent Role="GAL_1100">
+        <PropertyRef Name="COD_GUSU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1310_GAL_1100">
+    <End Role="GAL_1100" Type="Self.GAL_1100" Multiplicity="1" />
+    <End Role="GAL_1310" Type="Self.GAL_1310" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1100">
+        <PropertyRef Name="COD_USU" />
+      </Principal>
+      <Dependent Role="GAL_1310">
+        <PropertyRef Name="cod_usu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1300_GAL_1102">
+    <End Role="GAL_1102" Type="Self.GAL_1102" Multiplicity="0..1" />
+    <End Role="GAL_1300" Type="Self.GAL_1300" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1102">
+        <PropertyRef Name="cod_op" />
+      </Principal>
+      <Dependent Role="GAL_1300">
+        <PropertyRef Name="cod_op" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1201_GAL_1200">
+    <End Role="GAL_1200" Type="Self.GAL_1200" Multiplicity="0..1" />
+    <End Role="GAL_1201" Type="Self.GAL_1201" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1200">
+        <PropertyRef Name="COD_CLIE" />
+      </Principal>
+      <Dependent Role="GAL_1201">
+        <PropertyRef Name="COD_CLIE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1300_GAL_1201">
+    <End Role="GAL_1201" Type="Self.GAL_1201" Multiplicity="0..1" />
+    <End Role="GAL_1300" Type="Self.GAL_1300" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1201">
+        <PropertyRef Name="COD_FLEET" />
+      </Principal>
+      <Dependent Role="GAL_1300">
+        <PropertyRef Name="cod_fleet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1300_GAL_1302">
+    <End Role="GAL_1302" Type="Self.GAL_1302" Multiplicity="0..1" />
+    <End Role="GAL_1300" Type="Self.GAL_1300" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1302">
+        <PropertyRef Name="COD_EQ" />
+      </Principal>
+      <Dependent Role="GAL_1300">
+        <PropertyRef Name="cod_eq" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1300_GAL_1304">
+    <End Role="GAL_1304" Type="Self.GAL_1304" Multiplicity="1" />
+    <End Role="GAL_1300" Type="Self.GAL_1300" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1304">
+        <PropertyRef Name="cod_tveh" />
+      </Principal>
+      <Dependent Role="GAL_1300">
+        <PropertyRef Name="cod_tveh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GAL_1310_GAL_1300">
+    <End Role="GAL_1300" Type="Self.GAL_1300" Multiplicity="1" />
+    <End Role="GAL_1310" Type="Self.GAL_1310" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GAL_1300">
+        <PropertyRef Name="COD_ENT" />
+      </Principal>
+      <Dependent Role="GAL_1310">
+        <PropertyRef Name="cod_ent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="galileo_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GAL_1100" EntityType="Self.GAL_1100" />
+    <EntitySet Name="GAL_1101" EntityType="Self.GAL_1101" />
+    <EntitySet Name="GAL_1102" EntityType="Self.GAL_1102" />
+    <EntitySet Name="GAL_1200" EntityType="Self.GAL_1200" />
+    <EntitySet Name="GAL_1201" EntityType="Self.GAL_1201" />
+    <EntitySet Name="GAL_1300" EntityType="Self.GAL_1300" />
+    <EntitySet Name="GAL_1302" EntityType="Self.GAL_1302" />
+    <EntitySet Name="GAL_1304" EntityType="Self.GAL_1304" />
+    <EntitySet Name="GAL_1310" EntityType="Self.GAL_1310" />
+    <EntitySet Name="GAL_1600" EntityType="Self.GAL_1600" />
+    <EntitySet Name="GAL_1680" EntityType="Self.GAL_1680" />
+    <EntitySet Name="GAL_1000" EntityType="Self.GAL_1000" />
+    <EntitySet Name="GAL_1001" EntityType="Self.GAL_1001" />
+    <EntitySet Name="GAL_1010" EntityType="Self.GAL_1010" />
+    <EntitySet Name="GAL_1301" EntityType="Self.GAL_1301" />
+    <EntitySet Name="GAL_1303" EntityType="Self.GAL_1303" />
+    <EntitySet Name="GAL_1320" EntityType="Self.GAL_1320" />
+    <EntitySet Name="GAL_1400" EntityType="Self.GAL_1400" />
+    <EntitySet Name="GAL_1500" EntityType="Self.GAL_1500" />
+    <EntitySet Name="GAL_1601" EntityType="Self.GAL_1601" />
+    <EntitySet Name="GAL_1610" EntityType="Self.GAL_1610" />
+    <EntitySet Name="GAL_1620" EntityType="Self.GAL_1620" />
+    <EntitySet Name="GAL_1800" EntityType="Self.GAL_1800" />
+    <EntitySet Name="GAL_1900" EntityType="Self.GAL_1900" />
+    <EntitySet Name="GAL_1910" EntityType="Self.GAL_1910" />
+    <EntitySet Name="GAL_8225" EntityType="Self.GAL_8225" />
+    <AssociationSet Name="FK_GAL_1100_GAL_1101" Association="Self.FK_GAL_1100_GAL_1101">
+      <End Role="GAL_1101" EntitySet="GAL_1101" />
+      <End Role="GAL_1100" EntitySet="GAL_1100" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1310_GAL_1100" Association="Self.FK_GAL_1310_GAL_1100">
+      <End Role="GAL_1100" EntitySet="GAL_1100" />
+      <End Role="GAL_1310" EntitySet="GAL_1310" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1300_GAL_1102" Association="Self.FK_GAL_1300_GAL_1102">
+      <End Role="GAL_1102" EntitySet="GAL_1102" />
+      <End Role="GAL_1300" EntitySet="GAL_1300" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1201_GAL_1200" Association="Self.FK_GAL_1201_GAL_1200">
+      <End Role="GAL_1200" EntitySet="GAL_1200" />
+      <End Role="GAL_1201" EntitySet="GAL_1201" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1300_GAL_1201" Association="Self.FK_GAL_1300_GAL_1201">
+      <End Role="GAL_1201" EntitySet="GAL_1201" />
+      <End Role="GAL_1300" EntitySet="GAL_1300" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1300_GAL_1302" Association="Self.FK_GAL_1300_GAL_1302">
+      <End Role="GAL_1302" EntitySet="GAL_1302" />
+      <End Role="GAL_1300" EntitySet="GAL_1300" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1300_GAL_1304" Association="Self.FK_GAL_1300_GAL_1304">
+      <End Role="GAL_1304" EntitySet="GAL_1304" />
+      <End Role="GAL_1300" EntitySet="GAL_1300" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GAL_1310_GAL_1300" Association="Self.FK_GAL_1310_GAL_1300">
+      <End Role="GAL_1300" EntitySet="GAL_1300" />
+      <End Role="GAL_1310" EntitySet="GAL_1310" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="galileo_dbModelStoreContainer" CdmEntityContainer="galileo_dbEntities">
+    <EntitySetMapping Name="GAL_1100">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1100">
+        <MappingFragment StoreEntitySet="GAL_1100">
+          <ScalarProperty Name="COD_USU" ColumnName="COD_USU" />
+          <ScalarProperty Name="LOGIN_USU" ColumnName="LOGIN_USU" />
+          <ScalarProperty Name="PASS_USU" ColumnName="PASS_USU" />
+          <ScalarProperty Name="DES_USU" ColumnName="DES_USU" />
+          <ScalarProperty Name="COD_GUSU" ColumnName="COD_GUSU" />
+          <ScalarProperty Name="IP_USU" ColumnName="IP_USU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1101">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1101">
+        <MappingFragment StoreEntitySet="GAL_1101">
+          <ScalarProperty Name="COD_GUSU" ColumnName="COD_GUSU" />
+          <ScalarProperty Name="DES_GUSU" ColumnName="DES_GUSU" />
+          <ScalarProperty Name="NIV_GUSU" ColumnName="NIV_GUSU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1102">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1102">
+        <MappingFragment StoreEntitySet="GAL_1102">
+          <ScalarProperty Name="cod_op" ColumnName="cod_op" />
+          <ScalarProperty Name="ced_op" ColumnName="ced_op" />
+          <ScalarProperty Name="ape_op" ColumnName="ape_op" />
+          <ScalarProperty Name="nom_op" ColumnName="nom_op" />
+          <ScalarProperty Name="dir_op" ColumnName="dir_op" />
+          <ScalarProperty Name="tel1_op" ColumnName="tel1_op" />
+          <ScalarProperty Name="tel2_op" ColumnName="tel2_op" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1200">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1200">
+        <MappingFragment StoreEntitySet="GAL_1200">
+          <ScalarProperty Name="COD_CLIE" ColumnName="COD_CLIE" />
+          <ScalarProperty Name="RIF_CLIE" ColumnName="RIF_CLIE" />
+          <ScalarProperty Name="NIT_CLIE" ColumnName="NIT_CLIE" />
+          <ScalarProperty Name="RS_CLIE" ColumnName="RS_CLIE" />
+          <ScalarProperty Name="DIR_CLIE" ColumnName="DIR_CLIE" />
+          <ScalarProperty Name="TEL1_CLIE" ColumnName="TEL1_CLIE" />
+          <ScalarProperty Name="TEL2_CLIE" ColumnName="TEL2_CLIE" />
+          <ScalarProperty Name="FAX_CLIE" ColumnName="FAX_CLIE" />
+          <ScalarProperty Name="CE_CLIE" ColumnName="CE_CLIE" />
+          <ScalarProperty Name="URL_CLIE" ColumnName="URL_CLIE" />
+          <ScalarProperty Name="CONTACTO_CLIE" ColumnName="CONTACTO_CLIE" />
+          <ScalarProperty Name="SALDO_CLIE" ColumnName="SALDO_CLIE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1201">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1201">
+        <MappingFragment StoreEntitySet="GAL_1201">
+          <ScalarProperty Name="COD_FLEET" ColumnName="COD_FLEET" />
+          <ScalarProperty Name="DES_FLEET" ColumnName="DES_FLEET" />
+          <ScalarProperty Name="STATUS_FLEET" ColumnName="STATUS_FLEET" />
+          <ScalarProperty Name="FECHA_CREACION_FLEET" ColumnName="FECHA_CREACION_FLEET" />
+          <ScalarProperty Name="COD_CLIE" ColumnName="COD_CLIE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1300">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1300">
+        <MappingFragment StoreEntitySet="GAL_1300">
+          <ScalarProperty Name="COD_ENT" ColumnName="COD_ENT" />
+          <ScalarProperty Name="DESC_ENT" ColumnName="DESC_ENT" />
+          <ScalarProperty Name="DES_ENT" ColumnName="DES_ENT" />
+          <ScalarProperty Name="PLACAS_ENT" ColumnName="PLACAS_ENT" />
+          <ScalarProperty Name="COLOR_ENT" ColumnName="COLOR_ENT" />
+          <ScalarProperty Name="AÑO_ENT" ColumnName="AÑO_ENT" />
+          <ScalarProperty Name="ICONO_ENT" ColumnName="ICONO_ENT" />
+          <ScalarProperty Name="cod_fleet" ColumnName="cod_fleet" />
+          <ScalarProperty Name="SERIAL_ENT" ColumnName="SERIAL_ENT" />
+          <ScalarProperty Name="SERHEX_ENT" ColumnName="SERHEX_ENT" />
+          <ScalarProperty Name="connect_state" ColumnName="connect_state" />
+          <ScalarProperty Name="index_tcp" ColumnName="index_tcp" />
+          <ScalarProperty Name="cod_op" ColumnName="cod_op" />
+          <ScalarProperty Name="cod_tveh" ColumnName="cod_tveh" />
+          <ScalarProperty Name="eco_ent" ColumnName="eco_ent" />
+          <ScalarProperty Name="tel_sim_ent" ColumnName="tel_sim_ent" />
+          <ScalarProperty Name="ser_sim_ent" ColumnName="ser_sim_ent" />
+          <ScalarProperty Name="cod_eq" ColumnName="cod_eq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1302">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1302">
+        <MappingFragment StoreEntitySet="GAL_1302">
+          <ScalarProperty Name="COD_EQ" ColumnName="COD_EQ" />
+          <ScalarProperty Name="marca_eq" ColumnName="marca_eq" />
+          <ScalarProperty Name="model_eq" ColumnName="model_eq" />
+          <ScalarProperty Name="rev_eq" ColumnName="rev_eq" />
+          <ScalarProperty Name="TYPE_CMD_EQ" ColumnName="TYPE_CMD_EQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1304">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1304">
+        <MappingFragment StoreEntitySet="GAL_1304">
+          <ScalarProperty Name="cod_tveh" ColumnName="cod_tveh" />
+          <ScalarProperty Name="des_tveh" ColumnName="des_tveh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1310">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1310">
+        <MappingFragment StoreEntitySet="GAL_1310">
+          <ScalarProperty Name="COD_USU_ENT" ColumnName="COD_USU_ENT" />
+          <ScalarProperty Name="cod_usu" ColumnName="cod_usu" />
+          <ScalarProperty Name="cod_ent" ColumnName="cod_ent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1600">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1600">
+        <MappingFragment StoreEntitySet="GAL_1600">
+          <ScalarProperty Name="COD_EVENT" ColumnName="COD_EVENT" />
+          <ScalarProperty Name="COD_TEVENT" ColumnName="COD_TEVENT" />
+          <ScalarProperty Name="DATETIME_EVENT" ColumnName="DATETIME_EVENT" />
+          <ScalarProperty Name="COD_ENT" ColumnName="COD_ENT" />
+          <ScalarProperty Name="LAT_EVENT" ColumnName="LAT_EVENT" />
+          <ScalarProperty Name="LON_EVENT" ColumnName="LON_EVENT" />
+          <ScalarProperty Name="CURSO_EVENT" ColumnName="CURSO_EVENT" />
+          <ScalarProperty Name="ALTITUD_EVENT" ColumnName="ALTITUD_EVENT" />
+          <ScalarProperty Name="PTA2_EVENT" ColumnName="PTA2_EVENT" />
+          <ScalarProperty Name="PTA1_EVENT" ColumnName="PTA1_EVENT" />
+          <ScalarProperty Name="MOTOR_EVENT" ColumnName="MOTOR_EVENT" />
+          <ScalarProperty Name="ENCENDIDO_EVENT" ColumnName="ENCENDIDO_EVENT" />
+          <ScalarProperty Name="ADDRESS_EVENT" ColumnName="ADDRESS_EVENT" />
+          <ScalarProperty Name="VELOCITY_EVENT" ColumnName="VELOCITY_EVENT" />
+          <ScalarProperty Name="odometer_event" ColumnName="odometer_event" />
+          <ScalarProperty Name="calc_addr_event" ColumnName="calc_addr_event" />
+          <ScalarProperty Name="infowindow_event" ColumnName="infowindow_event" />
+          <ScalarProperty Name="Anchor" ColumnName="Anchor" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Shadow" ColumnName="Shadow" />
+          <ScalarProperty Name="ShadowSize" ColumnName="ShadowSize" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1680">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1680">
+        <MappingFragment StoreEntitySet="GAL_1680">
+          <ScalarProperty Name="cod_event" ColumnName="cod_event" />
+          <ScalarProperty Name="evento" ColumnName="evento" />
+          <ScalarProperty Name="datetime_event" ColumnName="datetime_event" />
+          <ScalarProperty Name="entidad" ColumnName="entidad" />
+          <ScalarProperty Name="lat_event" ColumnName="lat_event" />
+          <ScalarProperty Name="lon_event" ColumnName="lon_event" />
+          <ScalarProperty Name="address_event" ColumnName="address_event" />
+          <ScalarProperty Name="calc_addr_event" ColumnName="calc_addr_event" />
+          <ScalarProperty Name="serial_ent" ColumnName="serial_ent" />
+          <ScalarProperty Name="INFOWINDOW_EVENT" ColumnName="INFOWINDOW_EVENT" />
+          <ScalarProperty Name="cod_ent" ColumnName="cod_ent" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Shadow" ColumnName="Shadow" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="ShadowSize" ColumnName="ShadowSize" />
+          <ScalarProperty Name="cmd_event" ColumnName="cmd_event" />
+          <ScalarProperty Name="LastEditDate" ColumnName="LastEditDate" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1000">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1000">
+        <MappingFragment StoreEntitySet="GAL_1000">
+          <ScalarProperty Name="COD_OWNER" ColumnName="COD_OWNER" />
+          <ScalarProperty Name="RIF_OWNER" ColumnName="RIF_OWNER" />
+          <ScalarProperty Name="NIT_OWNER" ColumnName="NIT_OWNER" />
+          <ScalarProperty Name="RS_OWNER" ColumnName="RS_OWNER" />
+          <ScalarProperty Name="TEL1_OWNER" ColumnName="TEL1_OWNER" />
+          <ScalarProperty Name="TEL2_OWNER" ColumnName="TEL2_OWNER" />
+          <ScalarProperty Name="FAX_OWNER" ColumnName="FAX_OWNER" />
+          <ScalarProperty Name="CE_OWNER" ColumnName="CE_OWNER" />
+          <ScalarProperty Name="URL_OWNER" ColumnName="URL_OWNER" />
+          <ScalarProperty Name="D_IMP1_OWNER" ColumnName="D_IMP1_OWNER" />
+          <ScalarProperty Name="A_IMP1_OWNER" ColumnName="A_IMP1_OWNER" />
+          <ScalarProperty Name="D_IMP2_OWNER" ColumnName="D_IMP2_OWNER" />
+          <ScalarProperty Name="A_IMP2_OWNER" ColumnName="A_IMP2_OWNER" />
+          <ScalarProperty Name="D_IMP3_OWNER" ColumnName="D_IMP3_OWNER" />
+          <ScalarProperty Name="A_IMP3_OWNER" ColumnName="A_IMP3_OWNER" />
+          <ScalarProperty Name="lic_owner" ColumnName="lic_owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1001">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1001">
+        <MappingFragment StoreEntitySet="GAL_1001">
+          <ScalarProperty Name="COD_FONT" ColumnName="COD_FONT" />
+          <ScalarProperty Name="NOM_FONT" ColumnName="NOM_FONT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1010">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1010">
+        <MappingFragment StoreEntitySet="GAL_1010">
+          <ScalarProperty Name="COD_APPL" ColumnName="COD_APPL" />
+          <ScalarProperty Name="NOM_APPL" ColumnName="NOM_APPL" />
+          <ScalarProperty Name="DES_APPL" ColumnName="DES_APPL" />
+          <ScalarProperty Name="IP_APPL" ColumnName="IP_APPL" />
+          <ScalarProperty Name="TYPE_APPL" ColumnName="TYPE_APPL" />
+          <ScalarProperty Name="COD_USU" ColumnName="COD_USU" />
+          <ScalarProperty Name="PORT_APPL" ColumnName="PORT_APPL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1301">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1301">
+        <MappingFragment StoreEntitySet="GAL_1301">
+          <ScalarProperty Name="COD_MARCA" ColumnName="COD_MARCA" />
+          <ScalarProperty Name="DES_MARCA" ColumnName="DES_MARCA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1303">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1303">
+        <MappingFragment StoreEntitySet="GAL_1303">
+          <ScalarProperty Name="SER_HEX" ColumnName="SER_HEX" />
+          <ScalarProperty Name="index_conn" ColumnName="index_conn" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1320">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1320">
+        <MappingFragment StoreEntitySet="GAL_1320">
+          <ScalarProperty Name="COD_ENT_APPL" ColumnName="COD_ENT_APPL" />
+          <ScalarProperty Name="COD_ENT" ColumnName="COD_ENT" />
+          <ScalarProperty Name="COD_APPL" ColumnName="COD_APPL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1400">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1400">
+        <MappingFragment StoreEntitySet="GAL_1400">
+          <ScalarProperty Name="COD_MAP" ColumnName="COD_MAP" />
+          <ScalarProperty Name="DES_MAP" ColumnName="DES_MAP" />
+          <ScalarProperty Name="NOM_MAP" ColumnName="NOM_MAP" />
+          <ScalarProperty Name="FIELD1_MAP" ColumnName="FIELD1_MAP" />
+          <ScalarProperty Name="FIELD2_MAP" ColumnName="FIELD2_MAP" />
+          <ScalarProperty Name="ZOOM_MAP" ColumnName="ZOOM_MAP" />
+          <ScalarProperty Name="RUTA_MAP" ColumnName="RUTA_MAP" />
+          <ScalarProperty Name="TIPO_MAP" ColumnName="TIPO_MAP" />
+          <ScalarProperty Name="COLOR_MAP" ColumnName="COLOR_MAP" />
+          <ScalarProperty Name="SYMBOL_MAP" ColumnName="SYMBOL_MAP" />
+          <ScalarProperty Name="FONT_MAP" ColumnName="FONT_MAP" />
+          <ScalarProperty Name="VISIBLE_MAP" ColumnName="VISIBLE_MAP" />
+          <ScalarProperty Name="size_map" ColumnName="size_map" />
+          <ScalarProperty Name="style_map" ColumnName="style_map" />
+          <ScalarProperty Name="outline_map" ColumnName="outline_map" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1500">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1500">
+        <MappingFragment StoreEntitySet="GAL_1500">
+          <ScalarProperty Name="cod_sms" ColumnName="cod_sms" />
+          <ScalarProperty Name="nro_sms" ColumnName="nro_sms" />
+          <ScalarProperty Name="link_sms" ColumnName="link_sms" />
+          <ScalarProperty Name="dir_sms" ColumnName="dir_sms" />
+          <ScalarProperty Name="ent_sms" ColumnName="ent_sms" />
+          <ScalarProperty Name="placa_ent" ColumnName="placa_ent" />
+          <ScalarProperty Name="fecha_sms" ColumnName="fecha_sms" />
+          <ScalarProperty Name="evento_sms" ColumnName="evento_sms" />
+          <ScalarProperty Name="vel_sms" ColumnName="vel_sms" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1601">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1601">
+        <MappingFragment StoreEntitySet="GAL_1601">
+          <ScalarProperty Name="COD_TEVENT" ColumnName="COD_TEVENT" />
+          <ScalarProperty Name="DES_TEVENT" ColumnName="DES_TEVENT" />
+          <ScalarProperty Name="COLOR_TEVENT" ColumnName="COLOR_TEVENT" />
+          <ScalarProperty Name="COMMAND_TEVENT" ColumnName="COMMAND_TEVENT" />
+          <ScalarProperty Name="COD_EQ" ColumnName="COD_EQ" />
+          <ScalarProperty Name="COMMANDSTR_TEVENT" ColumnName="COMMANDSTR_TEVENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1610">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1610">
+        <MappingFragment StoreEntitySet="GAL_1610">
+          <ScalarProperty Name="COD_EVENT" ColumnName="COD_EVENT" />
+          <ScalarProperty Name="COD_TEVENT" ColumnName="COD_TEVENT" />
+          <ScalarProperty Name="DATETIME_EVENT" ColumnName="DATETIME_EVENT" />
+          <ScalarProperty Name="COD_ENT" ColumnName="COD_ENT" />
+          <ScalarProperty Name="LAT_EVENT" ColumnName="LAT_EVENT" />
+          <ScalarProperty Name="LON_EVENT" ColumnName="LON_EVENT" />
+          <ScalarProperty Name="CURSO_EVENT" ColumnName="CURSO_EVENT" />
+          <ScalarProperty Name="ALTITUD_EVENT" ColumnName="ALTITUD_EVENT" />
+          <ScalarProperty Name="PTA2_EVENT" ColumnName="PTA2_EVENT" />
+          <ScalarProperty Name="PTA1_EVENT" ColumnName="PTA1_EVENT" />
+          <ScalarProperty Name="MOTOR_EVENT" ColumnName="MOTOR_EVENT" />
+          <ScalarProperty Name="ENCENDIDO_EVENT" ColumnName="ENCENDIDO_EVENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1620">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1620">
+        <MappingFragment StoreEntitySet="GAL_1620">
+          <ScalarProperty Name="cod_index" ColumnName="cod_index" />
+          <ScalarProperty Name="cod_ent" ColumnName="cod_ent" />
+          <ScalarProperty Name="nro_index" ColumnName="nro_index" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1800">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1800">
+        <MappingFragment StoreEntitySet="GAL_1800">
+          <ScalarProperty Name="COD_COLOR" ColumnName="COD_COLOR" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="R" ColumnName="R" />
+          <ScalarProperty Name="G" ColumnName="G" />
+          <ScalarProperty Name="B" ColumnName="B" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1900">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1900">
+        <MappingFragment StoreEntitySet="GAL_1900">
+          <ScalarProperty Name="COD_CMD" ColumnName="COD_CMD" />
+          <ScalarProperty Name="des_cmd" ColumnName="des_cmd" />
+          <ScalarProperty Name="lit_cmd" ColumnName="lit_cmd" />
+          <ScalarProperty Name="num_cmd" ColumnName="num_cmd" />
+          <ScalarProperty Name="cod_tcmd" ColumnName="cod_tcmd" />
+          <ScalarProperty Name="popup_cmd" ColumnName="popup_cmd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_1910">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_1910">
+        <MappingFragment StoreEntitySet="GAL_1910">
+          <ScalarProperty Name="cod_tcmd" ColumnName="cod_tcmd" />
+          <ScalarProperty Name="des_tcmd" ColumnName="des_tcmd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAL_8225">
+      <EntityTypeMapping TypeName="galileo_dbModel.GAL_8225">
+        <MappingFragment StoreEntitySet="GAL_8225">
+          <ScalarProperty Name="COD_TABLA" ColumnName="COD_TABLA" />
+          <ScalarProperty Name="NOM_TABLA" ColumnName="NOM_TABLA" />
+          <ScalarProperty Name="DES_TABLA" ColumnName="DES_TABLA" />
+          <ScalarProperty Name="LAST_VALUE_TABLA" ColumnName="LAST_VALUE_TABLA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

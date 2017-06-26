@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0ac8bac1e7634124b0930df30f772e2c" Name="Diagram1">
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1100" Width="1.5" PointX="5.25" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1101" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1102" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1200" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1201" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1300" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1302" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1304" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1310" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1600" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1680" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1000" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1001" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1010" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1301" Width="1.5" PointX="5.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1303" Width="1.5" PointX="11.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1320" Width="1.5" PointX="7.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1400" Width="1.5" PointX="9.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1500" Width="1.5" PointX="11.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1601" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1610" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1620" Width="1.5" PointX="13.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1800" Width="1.5" PointX="13.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1900" Width="1.5" PointX="11.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_1910" Width="1.5" PointX="13.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="galileo_dbModel.GAL_8225" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="galileo_dbModel.FK_GAL_1100_GAL_1101" ManuallyRouted="false" />
+        <AssociationConnector Association="galileo_dbModel.FK_GAL_1310_GAL_1100" ManuallyRouted="false" />
+        <AssociationConnector Association="galileo_dbModel.FK_GAL_1300_GAL_1102" ManuallyRouted="false" />
+        <AssociationConnector Association="galileo_dbModel.FK_GAL_1201_GAL_1200" ManuallyRouted="false" />
+        <AssociationConnector Association="galileo_dbModel.FK_GAL_1300_GAL_1201" ManuallyRouted="false" />
+        <AssociationConnector Association="galileo_dbModel.FK_GAL_1300_GAL_1302" ManuallyRouted="false" />
+        <AssociationConnector Association="galileo_dbModel.FK_GAL_1300_GAL_1304" ManuallyRouted="false" />
+        <AssociationConnector Association="galileo_dbModel.FK_GAL_1310_GAL_1300" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
