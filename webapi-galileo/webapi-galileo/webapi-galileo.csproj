@@ -184,7 +184,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LastPositions.cs" />
+    <Compile Include="Controllers\positionsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="GalileoDataModel.Context.cs">
       <AutoGen>True</AutoGen>
